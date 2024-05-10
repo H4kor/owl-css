@@ -168,6 +168,38 @@ input[type='submit']:disabled {
     background-color: var(--primary-l2);
 }
 
+/* forms */
+
+label {
+    display: inline-block;
+    padding-bottom: var(--s0);
+}
+
+input,
+textarea {
+    display: inline-block;
+    width: 100%;
+    vertical-align: middle;
+    margin-bottom: var(--s3);
+    padding: var(--s1);
+    box-sizing: border-box;
+    border: solid var(--primary-l2) 1px;
+    border-radius: var(--s0);
+}
+
+input[type='color'] {
+    padding: var(--s0);
+    background-color: #fff;
+}
+
+label>input {
+    display: inherit;
+    width: initial;
+    margin-left: var(--s1);
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 /* button classes */
 
 button.secondary {
