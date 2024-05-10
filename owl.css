@@ -27,6 +27,7 @@
     /* fonts */
     --font: Arial, Helvetica, sans-serif;
     --font-h: 'Courier New', Courier, monospace;
+    --font-code: 'Courier New', Courier, monospace;
 
 
     /* spacings */
@@ -117,6 +118,71 @@ h6 {
     font-size: var(--fsl4);
 }
 
+hr {
+    color: var(--primary);
+    border-style: dashed;
+    border-width: 2px;
+}
+
+/* inline elements */
+a {
+    text-decoration: none;
+    color: var(--primary);
+}
+
+a:hover {
+    text-decoration: underline;
+    color: var(--primary-d2);
+}
+
+abbr[title] {
+    border-bottom: 1px dashed;
+    text-decoration: none;
+    cursor: help;
+}
+
+kbd {
+    background-color: var(--primary-d3);
+    color: var(--text-primary);
+    padding: 0 var(--s0);
+    border-radius: var(--s0);
+}
+
+mark {
+    background-color: var(--secondary-l3);
+}
+
+code {
+    font-family: var(--font-code);
+    background-color: var(--primary-l4);
+    padding: 0 var(--s0);
+    border-radius: 2px;
+}
+
+/* lists */
+
+ul, ol {
+    padding-left: var(--s3);
+}
+
+li {
+    padding-bottom: var(--s0);
+}
+
+ul li {
+    list-style: square;
+}
+
+/* Quote */
+
+blockquote {
+    margin-left: 0;
+    padding-left: var(--s4);
+    border-left: solid var(--primary) 3px;
+}
+
+/* Table */
+
 :where(table) {
     border-collapse: collapse;
     border-spacing: 0;
@@ -168,6 +234,10 @@ input[type='submit']:disabled {
     background-color: var(--primary-l2);
 }
 
+input[type=checkbox]:checked, input[type=radio]:checked{
+    accent-color: var(--primary);
+}
+
 /* forms */
 
 label {
@@ -192,12 +262,20 @@ input[type='color'] {
     background-color: #fff;
 }
 
+label {
+    width: 100%;
+}
+
 label>input {
     display: inherit;
     width: initial;
     margin-left: var(--s1);
     margin-top: 0;
     margin-bottom: 0;
+}
+
+label>input[type='color'] {
+    min-width: 170px;
 }
 
 /* button classes */
@@ -270,6 +348,7 @@ header>nav>ul>li {
     margin-right: var(--s1);
     padding: var(--s1);
     color: var(--text-primary);
+    list-style-type: none;
 }
 
 header>nav>ul>li:hover {
