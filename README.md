@@ -1,6 +1,7 @@
 # owl-css
 This is a WIP, minimal style sheet for my blog software.
 
+This design is heavily inspired by [PicoCSS](https://picocss.com), the CSS framework I used previously.
 
 ## Design Decisions
 
