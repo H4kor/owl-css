@@ -1,0 +1,246 @@
+:root {
+    /* font sizes (fs) */
+    /* 
+        0 base
+        lX large
+        sX small
+    */
+    --fs-scale: 1.125;
+    --fs0: 1rem;
+
+    --fsl1: calc(var(--fs0) * var(--fs-scale));
+    --fsl2: calc(var(--fsl1) * var(--fs-scale));
+    --fsl3: calc(var(--fsl2) * var(--fs-scale));
+    --fsl4: calc(var(--fsl3) * var(--fs-scale));
+
+    --fss1: calc(var(--fs0) / var(--fs-scale));
+    --fss2: calc(var(--fss1) / var(--fs-scale));
+    --fss3: calc(var(--fss2) / var(--fs-scale));
+    --fss4: calc(var(--fss3) / var(--fs-scale));
+
+    /* font weight */
+    --fw: 400;
+    --fwb: 700;
+    --fwl: 100;
+
+    /* font color */
+    /* fonts */
+    --font: Arial, Helvetica, sans-serif;
+    --font-h: 'Courier New', Courier, monospace;
+
+
+    /* spacings */
+    --spacing-scale: 1.5;
+    --max-spacing: 4rem;
+    --s5: var(--max-spacing);
+    --s4: calc(var(--s5) / var(--spacing-scale));
+    --s3: calc(var(--s4) / var(--spacing-scale));
+    --s2: calc(var(--s3) / var(--spacing-scale));
+    --s1: calc(var(--s2) / var(--spacing-scale));
+    --s0: calc(var(--s1) / var(--spacing-scale));
+
+    /* content-width */
+    --cw: 620px;
+
+    /* colors */
+    --text: hsl(0, 0%, 17%);
+
+    --primary: hsl(200, 25%, 50%);
+    --primary-l1: color-mix(in hsl, var(--primary), #fff 20%);
+    --primary-l2: color-mix(in hsl, var(--primary), #fff 40%);
+    --primary-l3: color-mix(in hsl, var(--primary), #fff 60%);
+    --primary-l4: color-mix(in hsl, var(--primary), #fff 80%);
+    --primary-d1: color-mix(in hsl, var(--primary), #000 20%);
+    --primary-d2: color-mix(in hsl, var(--primary), #000 40%);
+    --primary-d3: color-mix(in hsl, var(--primary), #000 60%);
+    --primary-d4: color-mix(in hsl, var(--primary), #000 80%);
+
+    --secondary: color-mix(in hsl longer hue, var(--primary), var(--primary) 50%);
+    --secondary-l1: color-mix(in hsl, var(--secondary), #fff 20%);
+    --secondary-l2: color-mix(in hsl, var(--secondary), #fff 40%);
+    --secondary-l3: color-mix(in hsl, var(--secondary), #fff 60%);
+    --secondary-l4: color-mix(in hsl, var(--secondary), #fff 80%);
+    --secondary-d1: color-mix(in hsl, var(--secondary), #000 20%);
+    --secondary-d2: color-mix(in hsl, var(--secondary), #000 40%);
+    --secondary-d3: color-mix(in hsl, var(--secondary), #000 60%);
+    --secondary-d4: color-mix(in hsl, var(--secondary), #000 80%);
+
+    --text-primary: color-mix(in hsl, var(--primary), #fff 90%);
+    --text-secondary: color-mix(in hsl, var(--secondary), #fff 90%);
+}
+
+/* Styling of main page elements */
+
+* {
+    /* global properties*/
+    font-family: var(--font);
+    color: var(--text);
+}
+
+body {
+    margin: 0;
+}
+
+main {
+    max-width: var(--cw);
+    margin: 0 auto;
+}
+
+:is(h1, h2, h3, h4, h5, h6) {
+    font-family: var(--font-h);
+    margin-top: var(--s4);
+    margin-bottom: var(--s0);
+}
+
+h1 {
+    font-size: var(--fsl4);
+}
+
+h2 {
+    font-size: var(--fsl3);
+}
+
+h3 {
+    font-size: var(--fsl2);
+}
+
+h4 {
+    font-size: var(--fsl1);
+}
+
+h5 {
+    font-size: var(--fs0);
+    font-weight: var(--fwb);
+}
+
+h6 {
+    font-size: var(--fsl4);
+}
+
+:where(table) {
+    border-collapse: collapse;
+    border-spacing: 0;
+    text-indent: 0;
+}
+
+table {
+    width: 100%;
+}
+
+th {
+    text-align: inherit;
+    padding: var(--s0);
+    border-bottom: solid var(--primary) 1px;
+}
+
+tr:nth-child(2n) {
+    background: var(--primary-l4);
+}
+
+td {
+    margin: 0;
+    padding: var(--s0);
+    border-bottom: solid var(--primary-l3) 1px;
+}
+
+/* buttons */
+
+button,
+input[type='button'],
+input[type='submit'] {
+    background-color: var(--primary);
+    color: var(--text-primary);
+    padding: var(--s1);
+    border: none;
+    border-radius: var(--s0);
+    font-size: var(--fs0);
+}
+
+button:hover,
+input[type='button']:hover,
+input[type='submit']:hover {
+    background-color: var(--primary-d1);
+}
+
+button:disabled,
+input[type='button']:disabled,
+input[type='submit']:disabled {
+    background-color: var(--primary-l2);
+}
+
+/* button classes */
+
+button.secondary {
+    background-color: var(--secondary);
+    color: var(--text-secondary);
+}
+
+button.secondary:hover {
+    background-color: var(--secondary-d1);
+}
+
+button.secondary:disabled {
+    background-color: var(--secondary-l2);
+}
+
+
+/* Header specific styling */
+
+header {
+    width: 100vw;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: var(--primary);
+    color: var(--text-primary);
+}
+
+header img {
+    max-height: var(--s5);
+    margin-right: var(--s1);
+    margin-left: var(--s1);
+}
+
+header>hgroup {
+    flex: 1;
+    min-width: calc(var(--cw) / 2);
+    margin-right: var(--s5);
+}
+
+header>hgroup>h1 {
+    margin-top: var(--s0);
+    margin-bottom: var(--s0);
+    color: var(--text-primary);
+}
+
+header>hgroup>p {
+    font-size: var(--fsl1);
+    margin-top: var(--s0);
+    margin-bottom: var(--s0);
+    font-family: var(--font);
+    color: var(--text-primary);
+}
+
+header>nav>ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding-left: 0;
+    padding-top: var(--s1);
+    padding-bottom: var(--s1);
+    align-items: center;
+}
+
+header>nav>ul>li {
+    float: left;
+    margin-right: var(--s1);
+    padding: var(--s1);
+    color: var(--text-primary);
+}
+
+header>nav>ul>li:hover {
+    color: var(--text-secondary);
+    background-color: var(--secondary);
+}
