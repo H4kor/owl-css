@@ -121,7 +121,7 @@ h6 {
 hr {
     color: var(--primary);
     border-style: dashed;
-    border-bottom: none ;
+    border-bottom: none;
     border-width: 3px;
 }
 
@@ -169,7 +169,8 @@ code {
 
 /* lists */
 
-ul, ol {
+ul,
+ol {
     padding-left: var(--s3);
 }
 
@@ -187,6 +188,14 @@ blockquote {
     margin-left: 0;
     padding-left: var(--s4);
     border-left: solid var(--primary) 3px;
+}
+
+blockquote>footer {
+    width: initial;
+    margin: initial;
+    background-color:initial;
+    color: initial;
+    padding-bottom:initial;
 }
 
 /* Table */
@@ -242,7 +251,9 @@ input[type='submit']:disabled {
     background-color: var(--primary-l2);
 }
 
-input[type=checkbox]:checked, input[type=radio]:checked, input[type=range]{
+input[type=checkbox]:checked,
+input[type=radio]:checked,
+input[type=range] {
     accent-color: var(--primary);
 }
 
@@ -357,9 +368,60 @@ header>nav>ul>li {
     padding: var(--s1);
     color: var(--text-primary);
     list-style-type: none;
+
 }
 
-header>nav>ul>li:hover {
-    color: var(--text-secondary);
-    background-color: var(--secondary);
+header>nav>ul>li>a {
+    color: var(--text-primary);
+}
+
+header>nav>ul>li>a:hover {
+    color: var(--text-primary);
+}
+
+/* Footer specific styling */
+
+footer {
+    width: 100vw;
+    margin: 0;
+    background-color: var(--primary);
+    color: var(--text-primary);
+    padding-bottom: var(--s5);
+}
+footer>div {
+    max-width: var(--cw);
+    margin: 0 auto;
+    color: var(--text-primary);
+    text-align: center;
+}
+
+footer>nav {
+    margin: 0 auto;
+    color: var(--text-primary);
+}
+
+footer>nav>ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding-left: 0;
+    padding-top: var(--s1);
+    padding-bottom: var(--s1);
+    align-items: center;
+}
+
+footer>nav>ul>li {
+    float: left;
+    margin-right: var(--s1);
+    padding: var(--s1);
+    color: var(--text-primary);
+    list-style-type: none;
+
+}
+footer>nav>ul>li>a {
+    color: var(--text-primary);
+}
+footer>nav>ul>li>a:hover {
+    color: var(--text-primary);
 }
