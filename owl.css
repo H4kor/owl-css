@@ -47,27 +47,27 @@
     --text: hsl(0, 0%, 17%);
 
     --primary: hsl(200, 25%, 50%);
-    --primary-l1: color-mix(in hsl, var(--primary), #fff 20%);
-    --primary-l2: color-mix(in hsl, var(--primary), #fff 40%);
-    --primary-l3: color-mix(in hsl, var(--primary), #fff 60%);
-    --primary-l4: color-mix(in hsl, var(--primary), #fff 80%);
-    --primary-d1: color-mix(in hsl, var(--primary), #000 20%);
-    --primary-d2: color-mix(in hsl, var(--primary), #000 40%);
-    --primary-d3: color-mix(in hsl, var(--primary), #000 60%);
-    --primary-d4: color-mix(in hsl, var(--primary), #000 80%);
+    --primary-l1: color-mix(in srgb, var(--primary), #fff 20%);
+    --primary-l2: color-mix(in srgb, var(--primary), #fff 40%);
+    --primary-l3: color-mix(in srgb, var(--primary), #fff 60%);
+    --primary-l4: color-mix(in srgb, var(--primary), #fff 80%);
+    --primary-d1: color-mix(in srgb, var(--primary), #000 20%);
+    --primary-d2: color-mix(in srgb, var(--primary), #000 40%);
+    --primary-d3: color-mix(in srgb, var(--primary), #000 60%);
+    --primary-d4: color-mix(in srgb, var(--primary), #000 80%);
 
     --secondary: color-mix(in hsl longer hue, var(--primary), var(--primary) 50%);
-    --secondary-l1: color-mix(in hsl, var(--secondary), #fff 20%);
-    --secondary-l2: color-mix(in hsl, var(--secondary), #fff 40%);
-    --secondary-l3: color-mix(in hsl, var(--secondary), #fff 60%);
-    --secondary-l4: color-mix(in hsl, var(--secondary), #fff 80%);
-    --secondary-d1: color-mix(in hsl, var(--secondary), #000 20%);
-    --secondary-d2: color-mix(in hsl, var(--secondary), #000 40%);
-    --secondary-d3: color-mix(in hsl, var(--secondary), #000 60%);
-    --secondary-d4: color-mix(in hsl, var(--secondary), #000 80%);
+    --secondary-l1: color-mix(in srgb, var(--secondary), #fff 20%);
+    --secondary-l2: color-mix(in srgb, var(--secondary), #fff 40%);
+    --secondary-l3: color-mix(in srgb, var(--secondary), #fff 60%);
+    --secondary-l4: color-mix(in srgb, var(--secondary), #fff 80%);
+    --secondary-d1: color-mix(in srgb, var(--secondary), #000 20%);
+    --secondary-d2: color-mix(in srgb, var(--secondary), #000 40%);
+    --secondary-d3: color-mix(in srgb, var(--secondary), #000 60%);
+    --secondary-d4: color-mix(in srgb, var(--secondary), #000 80%);
 
-    --text-primary: color-mix(in hsl, var(--primary), #fff 90%);
-    --text-secondary: color-mix(in hsl, var(--secondary), #fff 90%);
+    --text-primary: color-mix(in srgb, var(--primary), #fff 90%);
+    --text-secondary: color-mix(in srgb, var(--secondary), #fff 90%);
 }
 
 /* Styling of main page elements */
