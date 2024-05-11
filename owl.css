@@ -121,7 +121,15 @@ h6 {
 hr {
     color: var(--primary);
     border-style: dashed;
-    border-width: 2px;
+    border-bottom: none ;
+    border-width: 3px;
+}
+
+pre {
+    font-family: var(--font-code);
+    background-color: var(--primary-l4);
+    padding: var(--s0);
+    white-space: pre-wrap;
 }
 
 /* inline elements */
@@ -234,7 +242,7 @@ input[type='submit']:disabled {
     background-color: var(--primary-l2);
 }
 
-input[type=checkbox]:checked, input[type=radio]:checked{
+input[type=checkbox]:checked, input[type=radio]:checked, input[type=range]{
     accent-color: var(--primary);
 }
 
@@ -258,7 +266,7 @@ textarea {
 }
 
 input[type='color'] {
-    padding: var(--s0);
+    padding: 0;
     background-color: #fff;
 }
 
